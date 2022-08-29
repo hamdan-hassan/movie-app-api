@@ -94,4 +94,7 @@ app.post("/search", (req, res) => {
 //   search();
 // });
 
+app.get("/", (req, res) => {
+  res.send("Welcome");
+});
 app.listen(3000);
