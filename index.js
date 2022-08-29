@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
+const port = process.env.PORT || 3000;
 const app = express();
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
@@ -97,4 +97,4 @@ app.post("/search", (req, res) => {
 app.get("/", (req, res) => {
   res.send("Welcome");
 });
-app.listen(3000);
+app.listen(port);
